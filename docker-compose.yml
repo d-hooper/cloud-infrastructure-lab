@@ -1,7 +1,7 @@
 services:
   cloud:
     container_name: cloud
-    image: ghcr.io/jakeoverall/simple_server:latest
+    image: ghcr.io/d-hooper/simple_server:latest
     ports:
       - "3000:8080"
     env_file:
