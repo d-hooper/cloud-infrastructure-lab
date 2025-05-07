@@ -1,9 +1,9 @@
 services:
-  quick:
-    container_name: quick
+  cloud:
+    container_name: cloud
     image: ghcr.io/d-hooper/simple_server:latest
     ports:
-      - "7045:8080"
+      - "3000:8080"
     env_file:
       - .env.cloud-infrastructure-lab
     labels:
