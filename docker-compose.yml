@@ -1,7 +1,16 @@
 services:
+  keepr:
+    container_name: keepr
+    image: ghcr.io/d-hooper/keepr:latest
+    ports:
+      - "8081:8080"
+    env_file:
+      - .env.keepr
+    labels:
+      caddy.domain: keepr.dallinhooper.com
   cloud:
     container_name: cloud
-    image: ghcr.io/jakeoverall/simple_server:latest
+    image: ghcr.io/d-hooper/simple_server:latest
     ports:
       - "3000:8080"
     env_file:
