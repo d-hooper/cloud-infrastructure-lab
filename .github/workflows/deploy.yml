@@ -13,6 +13,9 @@ jobs:
         run: |
           printf "%s" "${{ secrets.ENV_CLOUD_INFRASTRUCTURE_LAB }}" > .env.cloud-infrastructure-lab
           printf "%s" "${{ secrets.ENV_KEEPR }}" > .env.keepr
+          printf "%s" "${{ secrets.ENV_TOWER }}" > .env.tower
+          printf "%s" "${{ secrets.ENV_ALLSPICE }}" > .env.allspice
+          printf "%s" "${{ secrets.ENV_PROJECTU }}" > .env.projectu
               
       - name: Deploy with Infra
         uses: codeworksacademy/infra@main
