@@ -12,6 +12,7 @@ jobs:
       - name: Prepare .env_files
         run: |
           printf "%s" "${{ secrets.ENV_CLOUD_INFRASTRUCTURE_LAB }}" > .env.cloud-infrastructure-lab
+          printf "%s" "${{ secrets.ENV_KEEPR }}" > .env.keepr
               
       - name: Deploy with Infra
         uses: codeworksacademy/infra@main
