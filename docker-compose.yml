@@ -17,3 +17,30 @@ services:
       - .env.cloud-infrastructure-lab
     labels:
       caddy.domain: cloud.dallinhooper.com
+  tower:
+    container_name: tower
+    image: ghcr.io/d-hooper/tower:latest
+    ports:
+      - "8082:3000"
+    env_file:
+      - .env.tower
+    labels:
+      caddy.domain: tower.dallinhooper.com
+  allspice:
+    container_name: allspice
+    image: ghcr.io/d-hooper/all_spice:latest
+    ports:
+      - "8083:8080"
+    env_file:
+      - .env.allspice
+    labels:
+      caddy.domain: allspice.dallinhooper.com
+  projectu:
+    container_name: projectu
+    image: ghcr.io/d-hooper/project_u:latest
+    ports:
+      - "8083:3000"
+    env_file:
+      - .env.projectu
+    labels:
+      caddy.domain: projectu.dallinhooper.com
