@@ -39,7 +39,7 @@ services:
     container_name: projectu
     image: ghcr.io/d-hooper/project_u:latest
     ports:
-      - "8083:3000"
+      - "8084:3000"
     env_file:
       - .env.projectu
     labels:
