@@ -23,11 +23,3 @@ jobs:
           host: ${{ secrets.HOST }}
           ssh_key: ${{ secrets.SSH_KEY }}
           ghcr_pat: ${{ secrets.GHCR_PAT }}
-
-      - name: Prepare .env_files
-        run: |
-          printf "%s" "${{ secrets.ENV_CLOUD_INFRASTRUCTURE_LAB }}" > .env.cloud-infrastructure-lab
-          printf "%s" "${{ secrets.ENV_KEEPR }}" > .env.keepr
-          printf "%s" "${{ secrets.ENV_TOWER }}" > .env.tower
-          printf "%s" "${{ secrets.ENV_ALLSPICE }}" > .env.allspice
-          printf "%s" "${{ secrets.ENV_PROJECTU }}" > .env.projectu
